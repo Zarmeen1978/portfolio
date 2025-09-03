@@ -107,7 +107,7 @@ export default function Portfolio() {
               Beautiful, fast, and accessible web experiences — made with React.
             </h2>
             <p className="hero-desc">
-              I’m a front-end engineer with 1+ year experience building responsive apps and mobile experiences. I focus on usability, performance and clean code. I love turning designs into delightful interfaces.
+              I’m a front-end engineer with 2+ year experience building responsive apps and mobile experiences. I focus on usability, performance and clean code. I love turning designs into delightful interfaces.
             </p>
             <div className="hero-buttons">
               <a href="#projects" className="primary-btn">See projects <ExternalLink size={14} /></a>
