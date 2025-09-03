@@ -67,31 +67,39 @@ export default function Portfolio() {
   return (
     <div className="portfolio-container">
       {/* HEADER */}
-      <header className="portfolio-header">
-        <div className="header-left">
-          <div className="logo">ZQ</div>
-          <div>
-            <h1 className="name">Zarmeen Qureshi</h1>
-            <p className="role">Frontend Developer • React / React Native</p>
-          </div>
-        </div>
+    <header className="portfolio-header">
+  <div className="header-left">
+    <div className="logo">ZQ</div>
+    <div>
+      <h1 className="name">Zarmeen Qureshi</h1>
+      <p className="role">Frontend Developer • React / React Native</p>
+    </div>
+  </div>
 
-        <nav className="header-nav">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  {/* Hamburger Icon */}
+  <div className="menu-toggle" onClick={() => 
+    document.querySelector(".header-nav").classList.toggle("active")
+  }>
+    ☰
+  </div>
 
-        <div className="header-right">
-          <a href="#contact" className="hire-btn">Hire Me</a>
-          <div className="social-icons">
-            <a aria-label="Github" href="#"><Github size={18} /></a>
-            <a aria-label="LinkedIn" href="#"><Linkedin size={18} /></a>
-            <a aria-label="Email" href="mailto:qureshizarmeen17@gmail.com"><Mail size={18} /></a>
-          </div>
-        </div>
-      </header>
+  <nav className="header-nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div className="header-right">
+    <a href="#contact" className="hire-btn">Hire Me</a>
+    <div className="social-icons">
+      <a aria-label="Github" href="#"><Github size={18} /></a>
+      <a aria-label="LinkedIn" href="#"><Linkedin size={18} /></a>
+      <a aria-label="Email" href="mailto:qureshizarmeen17@gmail.com"><Mail size={18} /></a>
+    </div>
+  </div>
+</header>
+
 
       {/* HERO */}
       <main className="portfolio-main">
