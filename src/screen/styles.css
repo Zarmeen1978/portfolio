@@ -66,7 +66,7 @@ h3:after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -173,6 +173,14 @@ h3:after {
 .social-icons a:hover {
   color: var(--primary);
   transform: translateY(-2px);
+}
+
+/* Hamburger Icon (hidden by default) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--text-light);
 }
 
 /* Hero */
@@ -541,18 +549,8 @@ h3:after {
   color: var(--text-muted);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-/* Default (Desktop) — already fine */
-.portfolio-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-}
+
+/* ----------------- Responsive ----------------- */
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -565,39 +563,36 @@ h3:after {
     font-size: 0.85rem;
   }
 }
+
 /* Hide hire button + social icons on tablets and mobile */
 @media (max-width: 738px) {
   .header-right {
     display: none;
   }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
-/* Mobile */
+/* Mobile Navigation */
 @media (max-width: 768px) {
-  .portfolio-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .header-left {
-    margin-bottom: 10px;
-  }
-
   .header-nav {
+    display: none; /* hidden by default */
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
-    margin: 10px 0;
+    margin-top: 10px;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px 20px;
+    border-radius: 12px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
   }
 
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .social-icons {
-    gap: 10px;
+  .header-nav.active {
+    display: flex; /* show when toggled */
   }
 }
 
@@ -616,42 +611,8 @@ h3:after {
     padding: 5px 12px;
   }
 }
-/* Mobile Navigation Fix */
-@media (max-width: 768px) {
-  .header-nav {
-    display: none; /* Hide menu by default */
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 10px;
-  }
 
-  .header-nav.active {
-    display: flex; /* Show when active */
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  /* Add a hamburger icon */
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-light);
-  }
-}
-
-/* Desktop shows normal nav */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-/* Responsive */
+/* Layout responsiveness */
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: 1fr 1fr;
