@@ -67,20 +67,13 @@ export default function Portfolio() {
   return (
     <div className="portfolio-container">
       {/* HEADER */}
-    <header className="portfolio-header">
+  <header className="portfolio-header">
   <div className="header-left">
     <div className="logo">ZQ</div>
     <div>
       <h1 className="name">Zarmeen Qureshi</h1>
       <p className="role">Frontend Developer • React / React Native</p>
     </div>
-  </div>
-
-  {/* Hamburger Icon */}
-  <div className="menu-toggle" onClick={() => 
-    document.querySelector(".header-nav").classList.toggle("active")
-  }>
-    ☰
   </div>
 
   <nav className="header-nav">
@@ -90,6 +83,7 @@ export default function Portfolio() {
     <a href="#contact">Contact</a>
   </nav>
 
+  {/* Right Side - hire + socials for large screens */}
   <div className="header-right">
     <a href="#contact" className="hire-btn">Hire Me</a>
     <div className="social-icons">
@@ -98,9 +92,15 @@ export default function Portfolio() {
       <a aria-label="Email" href="mailto:qureshizarmeen17@gmail.com"><Mail size={18} /></a>
     </div>
   </div>
+
+  {/* Hamburger icon for small screens */}
+  <div 
+    className="menu-toggle" 
+    onClick={() => document.querySelector(".header-nav").classList.toggle("active")}
+  >
+    ☰
+  </div>
 </header>
-
-
       {/* HERO */}
       <main className="portfolio-main">
         <section className="hero">
