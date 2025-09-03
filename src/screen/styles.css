@@ -565,6 +565,12 @@ h3:after {
     font-size: 0.85rem;
   }
 }
+/* Hide hire button + social icons on tablets and mobile */
+@media (max-width: 738px) {
+  .header-right {
+    display: none;
+  }
+}
 
 /* Mobile */
 @media (max-width: 768px) {
